@@ -1,0 +1,32 @@
+.blogBlockContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.blogBlock {
+  width: 100%;
+  max-width: 755px;
+}
+
+.insetComponent {
+  max-width: 755px;
+}
+
+.outsetComponent {
+  max-width: 1020px;
+  max-height: 700px;
+}
+.fullComponent {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.blogContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.blogComponent {
+  max-width: 1200px;
+  width: 100%;
+}

@@ -1,0 +1,118 @@
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+}
+
+@keyframes fadeOutScale {
+  from {
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+    visibility: hidden;
+  }
+}
+.searchInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  justify-content: start;
+}
+.searchInputInnerWrapper {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  border: 1px solid var(--zaron-blue);
+  height: 40px;
+  margin-top: 0.875rem;
+  border-radius: 4px;
+}
+.searchInput {
+  border: none;
+  height: 100%;
+}
+.searchInput:focus {
+  outline: none;
+}
+.searchInputInnerWrapper:focus {
+  outline: none;
+  border-color: var(--bs-blue);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.searchBox {
+  position: absolute;
+  width: 300px;
+  top: 56px;
+  display: flex;
+  border: 1px solid var(--zaron-blue);
+  border-radius: 4px;
+  padding: 0.5rem;
+  z-index: 100;
+  color: var(--zaron-blue);
+  background-color: white;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+.boxOpen {
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, display 0.2s ease-in-out;
+  transform: scale(1);
+  opacity: 1;
+  animation-name: fadeInScale;
+  pointer-events: auto;
+}
+
+.boxClose {
+  transform: scale(0.85);
+  opacity: 0;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, display 1s ease-in-out;
+  display: none;
+  animation-name: fadeOutScale;
+}
+
+.searchTopics {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+
+.searchTopics > h4 {
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  color: var(--zaron-blue);
+  border-bottom: 1px solid var(--zaron-blue);
+}
+
+.topicItem {
+  font-size: 16px;
+  padding: 0.5rem;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  border-radius: 4px;
+  color: var(--zaron-blue);
+}
+
+.topicItem:hover {
+  background-color: var(--zaron-blue);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+  color: var(--zaron-yellow);
+}
